@@ -1,0 +1,89 @@
+.topnav {
+    overflow: hidden;
+}
+.topnav h3 {
+	border: 1px solid;
+	margin-top: 0px;  
+	margin-bottom: 0px;
+    text-align: center;
+	background-color: #dde0e0;
+}
+.topnav p {
+	float: left;
+	border: 1px solid black;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-right: 7px;
+    padding-left:7px;
+    width: 250px;
+	margin-top: 0px;
+    margin-bottom: 10px; 
+    text-align: center;	
+}
+
+img{
+	border: 3px solid;
+	border-color: black;
+}
+.slogan h1 {
+	font-size: 50px;
+	margin-bottom: 1px;
+}
+.slogan p {
+	text-align: right;
+	padding-top: 0px;
+	margin-top: -30px;
+	margin-bottom: 40px;
+	margin-right: 350px;
+}
+.slogan p {
+	font-size: 15px;
+}
+.row {
+	float: left;
+	width: 33.33%;
+	margin-bottom: 20px;
+}
+.column {
+	background-color: #dadede;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+	height: 350px;
+}
+	
+.column img {
+	border: 2px solid;
+	border-color: black;
+	display: block;
+	margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+}
+.column button {
+	background-color: #e8eaea;
+	border: none;
+	display: inline-block;
+    padding: 11px 20px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+}
+.column button:hover {
+	background-color: #dde0e0;
+}
+.column button:active {
+  background-color: #dde0e0;
+  transform: translateY(4px);
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+hr {
+	height: 2px;
+    background-color: black;
+    border: none;
+}
