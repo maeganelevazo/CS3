@@ -8,11 +8,11 @@ h1 {
     margin-top: 15px;
     margin-bottom: 15px;
 }
-.section {
+section {
     width: 33.33%;
     float: left;
 }
-.article {
+article {
     position: relative;
     border: 1px solid black;
     margin-left: 10px;
@@ -34,7 +34,7 @@ p {
     margin-right: 5px;
 }
 iframe {
-    border: 3px solid black;
+    border: 2px outset gray;
 }
 #beef {
     background-color: blue;
