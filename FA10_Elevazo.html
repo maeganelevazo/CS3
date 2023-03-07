@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head><h1>Hola! Click the Button to Generate a Random Number</h1>
+		<style>
+			h1 {
+				text-align: center;
+			}
+			div {
+				background-color: #9FF781;
+				font-weight: bold;
+				width: 300px;
+				padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+	  <center>
+		<div>
+		<button onclick="generateNumber()">Generate Number</button>
+			<p id = "randomNumber"></p>
+			<p id = "breakdown"></p>
+		</div>
+	  </center>
+		<script>
+			var a;
+			var b;
+				function generateNumber(){
+					a = Math.floor(Math.random() * 1001);
+					b = String(a).split('');
+					document.getElementById("randomNumber").innerHTML = "Randomly generated number: " + a;
+					document.getElementById("breakdown").innerHTML = "Breakdown: " + b.slice(-3, -2)*100 + ", " + b.slice(-2, -1)*10 + ", " + b.slice(-1);
+				}
+		</script>
+	</body>
+</html>
