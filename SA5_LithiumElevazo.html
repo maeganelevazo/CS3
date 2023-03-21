@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My Online Shop</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="My Online Shop(SA5)">
+        <meta name="keywords" content="HTML, JavaScript">
+        <meta name="author" content="Maegan Elevazo">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            span {color: blue; text-decoration:underline}
+            button {width: 100px; padding: 5px; background: pink;}
+        </style>
+    </head>
+    <body>
+        <h1> Welcome to My Online Shop </h1>
+        <h2> Please select from the following items </h2>
+        <ol>
+            <li> Burger price: 50.00 Php </li>
+            <li> Fried price: 30.00 Php </li>
+            <li> Iced Tea price: 20.00 Php </li>
+        </ol>
+        <p> Item selected : <span id="item"> </span> </p>
+        <p> Qty bought : <span id="qty"> </span> </p>
+        <p> Amount to pay for the item: <span id="bill"> </span> </p>
+        <p> Current Total Bill <span id="tbill"> </span> </p>
+        <button onclick="buyItem()"> Buy an Item </button>
+        <button onclick="clearBill()"> Clear </button>
+        <script>	
+            var itemname= "";
+            var itemprice = 0;
+            var qty = 0;
+            var tbill = 0;
+            
+            function buyItem(){
+            	var itemnum = prompt('Enter Item Number: ');
+            	var ItemQty = prompt('Enter Quantity');
+            
+            	if(Number.isInteger(parseInt(ItemQty))){ 
+            	qty = parseInt(ItemQty);
+            	switch (itemnum){ //to assign a number for an item
+            		case '1':
+            			itemprice=50;
+            			itemname='Burger';
+            		break;
+            		case '2':
+            			itemprice=30;
+            			itemname='Fries';
+            		break;
+            		case '3':
+            			itemprice=20;
+            			itemname='Iced Tea';
+            		break;
+            		default: //to check if the input is valid
+            			alert('Item not available.');
+            		return;
+            	}		
+            
+            	var AmountToPay = qty * itemprice; //compute the amount to pay for the item
+            
+            	document.getElementById('item').innerHTML = itemname;
+            	document.getElementById('qty').innerHTML = qty;
+            	document.getElementById('bill').innerHTML = AmountToPay.toFixed(2);
+            
+            	tbill += AmountToPay; //compute the total bill for the different items bought
+            	document.getElementById('tbill').innerHTML = tbill.toFixed(2);
+            	} else {
+            		alert('Invalid QTY');
+            	}
+            }
+            
+            function clearBill(){
+            	tbill = 0;
+            	document.getElementById("tbill").innerHTML = "0";
+            }	
+            
+        </script>
+    </body>
+</html>

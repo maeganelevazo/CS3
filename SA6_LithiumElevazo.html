@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>One Time Password </title>
+        <meta charset="UTF-8">
+        <meta name="description" content="One Time Password Verification(SA6)">
+        <meta name="keywords" content="HTML, JavaScript">
+        <meta name="author" content="Maegan Elevazo">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {background: lightblue; 
+            text-align: center;
+            font-family: arial;
+            color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+    </head>
+    <body onload="generateOTP()">
+        <h1> Final Verification Step </h1>
+        <h2> Current OTP: <span id="otp"> _ _ _ _ _ _</span> <a href="" onclick="generateOTP()"> New OTP </a></h2>
+        <button onclick="verifyOTP()">Enter the OTP as shown above</button>
+        <script>	
+            var otp =''; //Empty string to store the generated OTP
+            
+            //Function to generate OTP
+            function generateOTP(){
+            	var num = '1234567890';
+            	otp = '';
+            	for (i = 0; i < 6; i++) {
+            		otp += num[Math.floor(Math.random() * 10)];
+            	}
+            	//Display the OTP on the webpage
+            	document.getElementById("otp").innerHTML = otp;
+            	return otp;
+               }
+            
+            //Function to verify OTP
+            function verifyOTP(){
+            	var userOTP = prompt("Enter the OTP shown below to verify");
+            	if(userOTP === otp){
+            		//If the OTP matches, it opens a webpage
+            		window.open("https://juliaquinn.com/series/bridgertons/");
+            	} else {
+            		//If the OTP doesn't match, display an alert and generate a new OTP
+            		alert("OTP not Matched");
+            		generateOTP();
+            	}
+            }
+            //Generate an OTP when the webpage loads
+            window.onload = generateOTP;
+            
+        </script>
+    </body>
+</html>
