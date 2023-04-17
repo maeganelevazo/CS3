@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiplication Table</title>
+    <style>
+      span {
+        display: inline-block;
+        font-weight: 550;
+        width: 20px;
+        border: 2px solid black;
+        padding: 1px;
+        margin: 3px;
+      }
+	  table, td {
+		border: 2px solid black;
+		padding: 5px;
+		text-align: center;
+	  }
+    </style>
+  </head>
+  <body>
+    <p>[enter a number between 2 and 10]</p>
+    <label for="x-int"></label>
+    <input type="number" id="x-int"></input>
+    <label for="y-int">by: </label>
+    <input type="number" id="y-int"></input>
+    <br />
+    <br/>
+    <button onclick="multiTable()">Click here when ready!</button>
+    <br />
+    <br />
+    <div id="table"></div>
+
+    <script>
+      function multiTable() {
+        var x = document.getElementById("x-int").value;
+        var y = document.getElementById("y-int").value;
+        var t = "<table>";
+        if (x > 2 && x < 10 && y > 2 && y < 10) {
+          for (var i = 1; i <= x; i++) {
+			t += "<tr>"
+            for (var j = 1; j <= y; j++) {
+              t += "<td>" + (i * j) + "</td>";
+            }
+            t += "</tr>";
+          }
+		  t += "</table>"
+          document.getElementById("table").innerHTML = t;
+        } else {
+          alert("Please enter values between 2 and 10");
+        }
+      }
+    </script>
+  </body>
