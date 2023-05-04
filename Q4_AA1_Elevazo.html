@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Genetic Coding</title>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <script>
+      let cArr = [];
+      let amArr = [];
+      let mRNA = prompt("Enter mRNA sequence: ");
+      let start = mRNA.indexOf("AUG");
+
+      if (start === -1) {
+        document.write("Start codon not found.");
+      } else {
+        let readingFrame = mRNA.slice(start);
+        let codon = "";
+        let i = 0;
+
+        while (i < readingFrame.length - 3) {
+          codon = readingFrame.slice(i, i + 3);
+          cArr.push(codon);
+          i += 3;
+        }
+
+        for (let i = 0; i < cArr.length; i++) {
+          let Acid = "";
+
+          switch (cArr[i]) {
+            case "UUU":
+            case "UUC":
+              Acid = "Phe";
+              break;
+            case "UUA":
+            case "UUG":
+            case "CUU":
+            case "CUC":
+            case "CUA":
+            case "CUG":
+              Acid = "Leu";
+              break;
+            case "AUU":
+            case "AUC":
+            case "AUA":
+              Acid = "Ile";
+              break;
+            case "AUG":
+              Acid = "Met";
+              break;
+            case "GUU":
+            case "GUC":
+            case "GUA":
+            case "GUG":
+              Acid = "Val";
+              break;
+            case "UCU":
+            case "UCC":
+            case "UCA":
+            case "UCG":
+              Acid = "Ser";
+              break;
+            case "CCU":
+            case "CCC":
+            case "CCA":
+            case "CCG":
+              Acid = "Pro";
+              break;
+            case "ACU":
+            case "ACC":
+            case "ACA":
+            case "ACG":
+              Acid = "Thr";
+              break;
+            case "GCU":
+            case "GCC":
+            case "GCA":
+            case "GCG":
+              Acid = "Ala";
+              break;
+            case "UAU":
+            case "UAC":
+              Acid = "Tyr";
+              break;
+            case "UGU":
+            case "UGC":
+              Acid = "Cys";
+              break;
+            case "UGG":
+              Acid = "Trp";
+              break;
+            case "UAA":
+            case "UAG":
+            case "UGA":
+              Acid = "STOP";
+              break;
+            default:
+              Acid = "Unknown";
+              break;
+          }
+
+          amArr.push(Acid);
+        }
+            document.write('[' + cArr.map(codon => `"${codon}"`).join(', ') + ']<br>');
+            document.write('<br>' + amArr.map((acid, index) => `${cArr[index]} --> ${acid}`).join('<br>') + '</p>');
+      }
+    </script>
+  </body>
+</html>
+
