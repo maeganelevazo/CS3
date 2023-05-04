@@ -102,6 +102,9 @@
           }
 
           amArr.push(Acid);
+           if(aminoAcid === "STOP"){
+                break;
+              }
         }
             document.write('[' + cArr.map(codon => `"${codon}"`).join(', ') + ']<br>');
             document.write('<br>' + amArr.map((acid, index) => `${cArr[index]} --> ${acid}`).join('<br>') + '</p>');
