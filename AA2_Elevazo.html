@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				font-family: Verdana, sans-serif;
+				background-image: url("https://images6.alphacoders.com/436/thumb-1920-436149.jpg");
+				padding: 20px;
+
+			}
+			
+			img{
+				width: 300px;
+				height: 100px;
+			}
+			form {
+			    font-family: FreeMono, monospace;
+				padding: 20px;
+				max-width: 700px;
+				margin: 0 auto;
+				border: 4px solid #83F84C;
+				border-radius: 20px;
+				background: rgba(255, 255, 255, 0.5);
+			}
+			
+			fieldset {
+				border: none;
+				padding: 0;
+				margin: 0;
+			}
+			
+			legend {
+				font-size: 24px;
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+			
+			label {
+				display: block;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+			
+			input[type="text"],
+			input[type="password"],
+			input[type="email"],
+			textarea,
+			select {
+				width: 100%;
+				padding: 10px;
+				border-radius: 4px;
+				box-sizing: border-box;
+				margin-bottom: 15px;
+				font-size: 16px;
+			}
+			
+			select {
+				height: 40px;
+			}
+			
+			button[type="submit"],
+			button[type="reset"] {
+				background-color: #4CAF50;
+				color: #fffdd0;
+				border-radius: 4px;
+				padding: 10px 20px;
+				font-size: 16px;
+				cursor: pointer;
+				margin-right: 10px;
+				text-shadow: 3px 3px 3px 3px #292929;
+			}
+			
+			button[type="reset"] {
+				background-color: #f44336;
+			}
+			
+			.error {
+				border: 4px solid red;
+			}
+			
+			.success {
+				border: 4px solid green;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<script>
+			function resetBorder(element) {
+				element.classList.remove("error");
+				element.classList.remove("success");
+			}
+			function validateInput(element) {
+				if (element.value === "") {
+					element.classList.add("error");
+				} else {
+					element.classList.remove("error");
+					element.classList.add("success");
+				}
+			}
+			function onSubmit(){
+				var name = document.getElementById("name").value
+				var username = document.getElementById("username").value
+				var gender = document.getElementById("gender").value
+				var password = document.getElementById("password").value
+				var email = document.getElementById("email").value
+				var address = document.getElementById("address").value
+				var interest = document.getElementById("interest/s").value
+				var output = document.getElementById("output").innerHTML = "<h2>Sign-Up Information:</h2>" +
+				"<p><strong>Name:</strong> " + name + "</p>" +
+				"<p><strong>Username:</strong> " + username + "</p>" +
+				"<p><strong>Gender:</strong> " + gender + "</p>" +
+				"<p><strong>Password:</strong> " + password + "</p>" +
+				"<p><strong>Email:</strong> " + email + "</p>" +
+				"<p><strong>Address:</strong> " + address + "</p>" +
+				"<p><strong>Interest:</strong> " + interest + "</p>" +
+				"<style>#output {width: 30%; font-family: FreeMono, monospace; margin-top: 10px;background-color: #87E8DE ;margin: 0 auto;border: solid 3px;box-shadow: 5px 5px #28EE05;border-radius: 4px; padding: 20px;}</style>"
+				
+				return false;
+			}
+		</script>
+		
+		<header>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Monsters_University_Logo.svg/1280px-Monsters_University_Logo.svg.png" alt="logo">
+		</header>
+		<form onsubmit = "return onSubmit()">
+			<fieldset>
+				<legend>Admission Form:</legend> <br>
+				
+				<!-- Name -->
+				<label>Name:</label>
+				<input type="text" id="name" required onblur="validateInput(this)"onfocus="resetBorder(this)"></input> <br><br>
+				
+				<!-- Username -->
+				<label>Username:</label>
+				<input type="text" id="username" required onblur="validateInput(this)"onfocus="resetBorder(this)"></input> <br><br>
+				
+				<!-- Gender -->
+				<label>Gender:</label>
+				<select id="gender" required onblur="validateInput(this)"onfocus="resetBorder(this)">
+					<option value="" disabled selected>Select Gender</option>
+					<option>Male</option>
+					<option>Female</option>
+					<option>Prefer Not to Mention</option>
+				</select>
+				<br><br>
+				
+				<!-- Password -->
+				<label>Password:</label>
+				<input type="password" id="password" required onblur="validateInput(this)"onfocus="resetBorder(this)"></input> <br><br>
+				
+				<!-- Email -->
+				<label>Email Address:</label>
+				<input type="email" id="email" required onblur="validateInput(this)"onfocus="resetBorder(this)"></input> <br><br>
+				
+				<!-- Address -->
+				<label for="address">Address:</label> <br>
+				<textarea name="address" id="address" required onblur="validateInput(this)"onfocus="resetBorder(this)"></textarea> <br><br>
+				
+				<!-- Interest/s -->
+				<label for="interest/s">Interest/s:</label> <br>
+				<textarea name="interest/s" id="interest/s" required onblur="validateInput(this)"onfocus="resetBorder(this)"></textarea> <br><br>
+				
+				<button type="submit">Submit</button>
+				<button type="reset">Reset</button>
+			</fieldset>
+		</form>		
+		
+		<div id="output"></div>
+	</body>
+</html>
