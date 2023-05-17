@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NCE Reviewer</title>
+  <style>
+    .feedback {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>NCE Reviewer</h1>
+
+  <h2>Multiple Choice Questions</h2>
+  <form id="mcqForm">
+    <ol>
+      <li for="q1">
+        <p>If the price of round-trip fare to Cincinnati, Ohio is $285, 
+          how much will it cost a family of four if the father pays the full fare, 
+          the mother pays ⅔ of the full fare, and the two children each pay ½ of the full fare ?</p>
+        <input type="radio" name="q1" value="a" required> 475 <br>
+        <input type="radio" name="q1" value="b" required> 570 <br>
+        <input type="radio" name="q1" value="c" required> 760 <br>
+        <input type="radio" name="q1" value="d" required> 1140 <br>
+        <div class="feedback" id="q1Feedback"></div>
+      </li>
+      <li for="q2">
+        <p>What number should be subtracted to both 71 and 58 that would result in two perfect 
+          squares?</p>
+        <input type="radio" name="q2" value="a" required> 22 <br>
+        <input type="radio" name="q2" value="b" required> 33 <br>
+        <input type="radio" name="q2" value="c" required> 35 <br>
+        <input type="radio" name="q2" value="d" required> 42 <br>
+        <div class="feedback" id="q2Feedback"></div>
+      </li>
+      <li for="q3">
+        <p>Suki owns 6 red shirts and 9 black shirts. If she picks one shirt at random, what is the 
+          probability that it will not be black?</p>
+        <input type="radio" name="q3" value="a" required> 2/5 <br>
+        <input type="radio" name="q3" value="b" required> 4/5 <br>
+        <input type="radio" name="q3" value="c" required> 2/3 <br>
+        <input type="radio" name="q3" value="d" required> 1/3 <br>
+        <div class="feedback" id="q3Feedback"></div>
+      </li>
+      <li for="q4">
+        <p>What percent of four is ⅗ of 8?</p>
+        <input type="radio" name="q4" value="a" required> 48% <br>
+        <input type="radio" name="q4" value="b" required> 80% <br>
+        <input type="radio" name="q4" value="c" required> 83% <br>
+        <input type="radio" name="q4" value="d" required> 50% <br>
+        <div class="feedback" id="q4Feedback"></div>
+      </li>
+      <li for="q5">
+        <p>Lana ran 5 ½ miles on Friday, on Saturday 6 ¼ miles, on Sunday 4 ½ miles, and on
+          Monday 2 ¾ miles. What is the average number of miles Lana ran?</p>
+        <input type="radio" name="q5" value="a" required> 5 miles <br>
+        <input type="radio" name="q5" value="b" required> 3 3/4 miles <br>
+        <input type="radio" name="q5" value="c" required> 4 miles <br>
+        <input type="radio" name="q5" value="d" required> 4 3/4 miles <br>
+        <div class="feedback" id="q5Feedback"></div>
+      </li>
+      <li for="q6">
+        <p>A car averages 27 miles per gallon. If gas costs $4.04 per gallon, which of the 
+          following is closest to how much the gas would cost for this car to travel 2,727 miles</p>
+        <input type="radio" name="q6" value="a" required> $408.04 <br>
+        <input type="radio" name="q6" value="b" required> $444.40 <br>
+        <input type="radio" name="q6" value="c" required> $409.08  <br>
+        <input type="radio" name="q6" value="d" required> $444.44 <br>
+        <div class="feedback" id="q6Feedback"></div>
+      </li>
+      <li for="q7">
+        <p>The ratio in a triangle adjacent to the hypotenuse is?</p>
+        <input type="radio" name="q7" value="a" required> cosine <br>
+        <input type="radio" name="q7" value="b" required> tangent <br>
+        <input type="radio" name="q7" value="c" required> sine  <br>
+        <input type="radio" name="q7" value="d" required> inverse cosine <br>
+        <div class="feedback" id="q7Feedback"></div>
+      </li>
+      <li for="q8">
+        <p>What does D represent in the Roman numeral system?</p>
+        <input type="radio" name="q8" value="a" required> 1000 <br>
+        <input type="radio" name="q8" value="b" required> 50 <br>
+        <input type="radio" name="q8" value="c" required> 500 <br>
+        <input type="radio" name="q8" value="d" required> 100 <br>
+        <div class="feedback" id="q8Feedback"></div>
+      </li>
+      <li for="q9">
+        <p>Three times the first of three consecutive odd integers is 3 more than twice the third. Finf 
+          the third integer.</p>
+        <input type="radio" name="q9" value="a" required> 9 <br>
+        <input type="radio" name="q9" value="b" required> 13 <br>
+        <input type="radio" name="q9" value="c" required> 11 <br>
+        <input type="radio" name="q9" value="d" required> 15 <br>
+        <div class="feedback" id="q9Feedback"></div>
+      </li>
+      <li for="q10">
+        <p>A meter stick was cut into two pieces at the 64-cm mark. What the ratio of the smaller 
+          piece to the largest piece.</p>
+        <input type="radio" name="q10" value="a" required> 9:16 <br>
+        <input type="radio" name="q10" value="b" required> 16:25 <br>
+        <input type="radio" name="q10" value="c" required> 13:50 <br>
+        <input type="radio" name="q10" value="d" required> 9:25 <br>
+        <div class="feedback" id="q10Feedback"></div>
+      </li>
+      <li for="q11">
+        <p>The product of 2 whole numbers is 36, and their ratio is 1:4. Which of these is the smaller 
+          number.</p>
+        <input type="radio" name="q11" value="a" required> 9 <br>
+        <input type="radio" name="q11" value="b" required> 3 <br>
+        <input type="radio" name="q11" value="c" required> 2 <br>
+        <input type="radio" name="q11" value="d" required> 12 <br>
+        <div class="feedback" id="q11Feedback"></div>
+      </li>
+      <li for="q12">
+        <p>Find, in feet, the amount of framing needed to frame a picture 8 ½ inches by 11 inches ?</p>
+        <input type="radio" name="q12" value="a" required> 3 1/4 ft <br>
+        <input type="radio" name="q12" value="b" required> 2 1/4 ft <br>
+        <input type="radio" name="q12" value="c" required> 4 1/4 ft <br>
+        <input type="radio" name="q12" value="d" required> 5 1/4 ft <br>
+        <div class="feedback" id="q12Feedback"></div>
+      </li>
+      <li for="q13">
+        <p>If a certain job can be finished by 18 workers in 26 days, how many workers are needed 
+          to finish the job in 12 days?</p>
+        <input type="radio" name="q13" value="a" required> 24 <br>
+        <input type="radio" name="q13" value="b" required> 30 <br>
+        <input type="radio" name="q13" value="c" required> 39 <br>
+        <input type="radio" name="q13" value="d" required> 45 <br>
+        <div class="feedback" id="q13Feedback"></div>
+      </li>
+      <li for="q14">
+        <p>Which of these weighs the heaviest?</p>
+        <input type="radio" name="q14" value="a" required> 2250 g <br>
+        <input type="radio" name="q14" value="b" required> 2.5 kg <br>
+        <input type="radio" name="q14" value="c" required> 4200 mg <br>
+        <input type="radio" name="q14" value="d" required> 5 pounds <br>
+        <div class="feedback" id="q14Feedback"></div>
+      </li>
+      <li for="q15">
+        <p>What is the median of the following numbers 8, 5, 7, 5, 9, 9, 1, 8, and 10?</p>
+        <input type="radio" name="q15" value="a" required> 5 <br>
+        <input type="radio" name="q15" value="b" required> 7 <br>
+        <input type="radio" name="q15" value="c" required> 8 <br>
+        <input type="radio" name="q15" value="d" required> 9 <br>
+        <div class="feedback" id="q15Feedback"></div>
+      </li>
+      <div>
+        <li for="q16">
+          <p> Continue the sequence: 37, 78, 45, 70, 53, 62, 61, __, __ <input type="text" name="q16" required></p>
+          <div class="feedback" id="q16Feedback"></div>
+        </li>
+        <li for="q17">
+          <p>Continue the sequence: 48, 48, 53, 43, 59, 37, 66,  __, __ <input type="text" name="q17" required></p>
+          <div class="feedback" id="q17Feedback"></div>
+        </li>
+        <li for="q18">
+          <p> Nina walks a distance of 6 meters towards south. She then turns to the left and walks 6 meters. After this she turns to the right and walks 6 meters. In which direction is she facing now?<input type="text" name="q18" required></p>
+          <div class="feedback" id="q18Feedback"></div>
+        </li>
+        <li for="q19">
+          <p>__ is a comparison of two numbers by division; also a fraction <input type="text" name="q19" required></p>
+          <div class="feedback" id="q19Feedback"></div>
+        </li>
+        <li for="q20">
+          <p>It is the numerical coefficient or constant quantity placed before the variable.<input type="text" name="q20" required></p>
+          <div class="feedback" id="q20Feedback"></div>
+        </li>
+      </div>
+    </ol>
+  </form>
+  <p id="score"></p>
+
+  <h2>Fill in the Blanks</h2>
+  
+
+  <button onclick="submitQuiz()">Submit</button>
+  <button onclick="resetQuiz()">Reset</button>
+
+  <script>
+    const form = document.getElementById('mcqForm');
+
+    function submitQuiz() {
+      const corrAnswers = ['c','a','a','d','d','a','a','c','d','a','b','a','c','b','d','54, 69','30, 74','South','Ratio','Coefficient'];
+      const userInput = [
+        form.elements.q1.value,
+        form.elements.q2.value,
+        form.elements.q3.value,
+        form.elements.q4.value,
+        form.elements.q5.value,
+        form.elements.q6.value,
+        form.elements.q7.value,
+        form.elements.q8.value,
+        form.elements.q9.value,
+        form.elements.q10.value,
+        form.elements.q11.value,
+        form.elements.q12.value,
+        form.elements.q13.value,
+        form.elements.q14.value,
+        form.elements.q15.value,
+        form.elements.q16.value,
+        form.elements.q17.value,
+        form.elements.q18.value,
+        form.elements.q19.value,
+        form.elements.q20.value
+      ];
+      var score = 0;
+      for (let i = 0; i < userInput.length; i++) {
+        const input = form.querySelector(`input[name="q${i+1}"]:checked`);
+        const feedback = form.querySelector(`#q${i+1}Feedback`);
+
+        if (input && feedback) {
+          if (input.type === 'radio') {
+            if (userInput[i] === corrAnswers[i]) {
+              score++;
+              feedback.textContent = 'Correct!';
+            } else {
+              feedback.textContent = 'Incorrect';
+            }
+          } else if (input.type === "text") {
+            if (userInput[i] === corrAnswers[i]) {
+              feedback.textContent = 'Correct';
+            } else {
+              feedback.textContent = 'Incorrect';
+            }
+          }
+        }
+      }
+      document.getElementById('score').textContent = `Score: ${score}`;
+    }
+
+    function reset(){
+
+    }
+  </script>
+</body>
+</html>
