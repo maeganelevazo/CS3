@@ -14,20 +14,20 @@
   <h1>NCE Reviewer</h1>
 
   <h2>Multiple Choice Questions</h2>
-  <form id="NCETest">
+  <form id="NCETest" onsubmit="return submitQuiz()">
     <ol>
       <li>
         <div class="questions" <p>If the price of round-trip fare to Cincinnati, Ohio is $285,
           how much will it cost a family of four if the father pays the full fare,
           the mother pays ⅔ of the full fare, and the two children each pay ½ of the full fare ?</p>
-          <input type="radio" name="q1" required value="a">
-            <label for="a">475</label><br>
-          <input type="radio" name="q1" required value="b">
-            <label for="b">570</label><br>
-          <input type="radio" name="q1" required value="c">
-            <label for="c">760</label><br>
-          <input type="radio" name="q1" required value="d">
-            <label for="d">1140</label><br>
+          <input type="radio" name="q1" value="a" required>
+          <label for="a">475</label><br>
+          <input type="radio" name="q1" value="b">
+          <label for="b">570</label><br>
+          <input type="radio" name="q1" value="c">
+          <label for="c">760</label><br>
+          <input type="radio" name="q1" value="d">
+          <label for="d">1140</label><br>
           <p id="f1"></p>
         </div>
       </li>
@@ -35,13 +35,13 @@
         <div class="questions" <p>What number should be subtracted to both 71 and 58 that would result in two perfect
           squares?</p>
           <input type="radio" name="q2" required value="a">
-            <label for="a"> 22</label><br>
-          <input type="radio" name="q2" required value="b">
-            <label for="b"> 33</label><br>
-          <input type="radio" name="q2" required value="c">
-            <label for="c"> 35</label><br>
-          <input type="radio" name="q2" required value="d">
-            <label for="d"> 42</label><br>
+          <label for="a"> 22</label><br>
+          <input type="radio" name="q2"value="b">
+          <label for="b"> 33</label><br>
+          <input type="radio" name="q2" value="c">
+          <label for="c"> 35</label><br>
+          <input type="radio" name="q2" value="d">
+          <label for="d"> 42</label><br>
           <p id="f2"></p>
         </div>
       </li>
@@ -50,26 +50,26 @@
           the
           probability that it will not be black?</p>
           <input type="radio" name="q3" required value="a">
-            <label for="a"> 2/5</label><br>
-          <input type="radio" name="q3" required value="b">
-            <label for="b"> 4/5</label><br>
-          <input type="radio" name="q3" required value="c">
-            <label for="c"> 2/3</label><br>
-          <input type="radio" name="q3" required value="d">
-            <label for="d"> 1/3</label><br>
+          <label for="a"> 2/5</label><br>
+          <input type="radio" name="q3" value="b">
+          <label for="b"> 4/5</label><br>
+          <input type="radio" name="q3" value="c">
+          <label for="c"> 2/3</label><br>
+          <input type="radio" name="q3" value="d">
+          <label for="d"> 1/3</label><br>
           <p id="f3"></p>
         </div>
       </li>
       <li>
         <div class="questions" <p>What percent of four is ⅗ of 8?</p>
           <input type="radio" name="q4" required value="a">
-            <label for="adjacent">48%</label><br>
-          <input type="radio" name="q4" required value="b">
-            <label for="b"> 80%</label><br>
-          <input type="radio" name="q4" required value="c">
-            <label for="c"> 83%</label><br>
-          <input type="radio" name="q4" required value="d">
-            <label for="d">120%</label><br>
+          <label for="adjacent">48%</label><br>
+          <input type="radio" name="q4" value="b">
+          <label for="b"> 80%</label><br>
+          <input type="radio" name="q4" value="c">
+          <label for="c"> 83%</label><br>
+          <input type="radio" name="q4" value="d">
+          <label for="d">120%</label><br>
           <p id="f4"></p>
         </div>
       </li>
@@ -78,13 +78,13 @@
           <p>Lana ran 5 ½ miles on Friday, on Saturday 6 ¼ miles, on Sunday 4 ½ miles, and on
             Monday 2 ¾ miles. What is the average number of miles Lana ran?</p>
           <input type="radio" name="q5" required value="a">
-            <label for="a">5 miles</label><br>
-          <input type="radio" name="q5" required value="b">
-            <label for="b">3 3/4 miles</label><br>
-          <input type="radio" name="q5" required value="c">
-            <label for="c">4 miles</label><br>
-          <input type="radio" name="q5" required value="d">
-            <label for="d">4 3/4 miles</label><br>
+          <label for="a">5 miles</label><br>
+          <input type="radio" name="q5" value="b">
+          <label for="b">3 3/4 miles</label><br>
+          <input type="radio" name="q5" value="c">
+          <label for="c">4 miles</label><br>
+          <input type="radio" name="q5" value="d">
+          <label for="d">4 3/4 miles</label><br>
           <p id="f5"></p>
         </div>
       </li>
@@ -92,26 +92,26 @@
         <div class="questions" <p>A car averages 27 miles per gallon. If gas costs $4.04 per gallon, which of the
           following is closest to how much the gas would cost for this car to travel 2,727 miles</p>
           <input type="radio" name="q6" required value="a">
-            <label for="a">$408.04</label><br>
-          <input type="radio" name="q6" required value="b">
-            <label for="b">$444.40</label><br>
-          <input type="radio" name="q6" required value="c">
-            <label for="c">$409.08</label><br>
-          <input type="radio" name="q6" required value="d">
-            <label for="d">$444.44</label><br>
+          <label for="a">$408.04</label><br>
+          <input type="radio" name="q6"value="b">
+          <label for="b">$444.40</label><br>
+          <input type="radio" name="q6" value="c">
+          <label for="c">$409.08</label><br>
+          <input type="radio" name="q6" value="d">
+          <label for="d">$444.44</label><br>
           <p id="f6"></p>
         </div>
       </li>
       <li>
         <div class="questions" <p>The ratio in a triangle adjacent to the hypotenuse is?</p>
           <input type="radio" name="q7" required value="a">
-            <label for="a">cosine</label><br>
-          <input type="radio" name="q7" required value="b">
-            <label for="b">tangent</label><br>
-          <input type="radio" name="q7" required value="c">
-            <label for="c">sine</label><br>
-          <input type="radio" name="q7" required value="d">
-            <label for="d">inverse cosine</label><br>
+          <label for="a">cosine</label><br>
+          <input type="radio" name="q7" value="b">
+          <label for="b">tangent</label><br>
+          <input type="radio" name="q7" value="c">
+          <label for="c">sine</label><br>
+          <input type="radio" name="q7" value="d">
+          <label for="d">inverse cosine</label><br>
           <p id="f7"></p>
         </div>
       </li>
@@ -119,11 +119,11 @@
         <div class="questions" <p>What does D represent in the Roman numeral system?</p>
           <input type="radio" name="q8" required value="a">
             <label for="a">1000</label><br>
-          <input type="radio" name="q8" required value="b">
+          <input type="radio" name="q8" value="b">
             <label for="b">50</label><br>
-          <input type="radio" name="q8" required value="c">
+          <input type="radio" name="q8" value="c">
             <label for="c">500</label><br>
-          <input type="radio" name="q8" required value="d">
+          <input type="radio" name="q8" value="d">
             <label for="d">100</label><br>
           <p id="f8"></p>
         </div>
@@ -134,11 +134,11 @@
           the third integer.</p>
           <input type="radio" name="q9" required value="a">
             <label for="a">9</label><br>
-          <input type="radio" name="q9" required value="b">
+          <input type="radio" name="q9" value="b">
             <label for="b">13</label><br>
-          <input type="radio" name="q9" required value="c">
+          <input type="radio" name="q9" value="c">
             <label for="c">11</label><br>
-          <input type="radio" name="q9" required value="d">
+          <input type="radio" name="q9" value="d">
             <label for="d">15</label><br>
           <p id="f9"></p>
         </div>
@@ -148,11 +148,11 @@
           piece to the largest piece.</p>
           <input type="radio" name="q10" required value="a">
             <label for="a">9:16</label><br>
-          <input type="radio" name="q10" required value="b">
+          <input type="radio" name="q10" value="b">
             <label for="b">16:25</label><br>
-          <input type="radio" name="q10" required value="c">
+          <input type="radio" name="q10" value="c">
             <label for="c">13:50</label><br>
-          <input type="radio" name="q10" required value="d">
+          <input type="radio" name="q10" value="d">
             <label for="d">9:25</label><br>
           <p id="f10"></p>
         </div>
@@ -163,11 +163,11 @@
           number.</p>
           <input type="radio" name="q11" required value="a">
             <label for="a">9</label><br>
-          <input type="radio" name="q11" required value="b">
+          <input type="radio" name="q11" value="b">
             <label for="b">3</label><br>
-          <input type="radio" name="q11" required value="c">
+          <input type="radio" name="q11" value="c">
             <label for="c">2</label><br>
-          <input type="radio" name="q11" required value="d">
+          <input type="radio" name="q11" value="d">
             <label for="d">12</label><br>
           <p id="f11"></p>
         </div>
@@ -177,11 +177,11 @@
           ?</p>
           <input type="radio" name="q12" required value="a">
             <label for="a">3 1/4 ft</label><br>
-          <input type="radio" name="q12" required value="b">
+          <input type="radio" name="q12" value="b">
             <label for="b">2 1/4 ft</label><br>
-          <input type="radio" name="q12" required value="c">
+          <input type="radio" name="q12" value="c">
             <label for="c">4 1/4 ft</label><br>
-          <input type="radio" name="q12" required value="d">
+          <input type="radio" name="q12" value="d">
             <label for="d">5 1/4 ft</label><br>
           <p id="f12"></p>
         </div>
@@ -191,37 +191,37 @@
           to finish the job in 12 days?</p>
           <input type="radio" name="q13" required value="a">
             <label for="a">24</label> <br>
-          <input type="radio" name="q13" required value="b">
+          <input type="radio" name="q13" value="b">
             <label for="b">30</label><br>
-          <input type="radio" name="q13" required value="c">
+          <input type="radio" name="q13" value="c">
             <label for="c">39</label><br>
-          <input type="radio" name="q13" required value="d">
+          <input type="radio" name="q13" value="d">
             <label for="d">45</label><br>
           <p id="f13"></p>
         </div>
       </li>
       <li>
-        <div class="questions" <p>Which of these weighs the heaviest?</p>
+        <div class="questions"> <p>Which of these weighs the heaviest?</p>
           <input type="radio" name="q14" required value="a">
             <label for="a">2250 g</label><br>
-          <input type="radio" name="q14" required value="b">
+          <input type="radio" name="q14" value="b">
             <label for="b">2.5 kg</label><br>
-          <input type="radio" name="q14" required value="c">
+          <input type="radio" name="q14" value="c">
             <label for="c">4200 mg</label><br>
-          <input type="radio" name="q14" required value="d">
+          <input type="radio" name="q14" value="d">
             <label for="d">5 pounds</label><br>
           <p id="f14"></p>
         </div>
       </li>
       <li>
-        <div class="questions" <p>What is the median of the following numbers 8, 5, 7, 5, 9, 9, 1, 8, and 10?</p>
+        <div class="questions"> <p>What is the median of the following numbers 8, 5, 7, 5, 9, 9, 1, 8, and 10?</p>
           <input type="radio" name="q15" required value="a">
             <label for="a">5</label><br>
-          <input type="radio" name="q15" required value="b">
+          <input type="radio" name="q15" value="b">
             <label for="b">7</label><br>
-          <input type="radio" name="q15" required value="c">
+          <input type="radio" name="q15" value="c">
             <label for="c">8</label><br>
-          <input type="radio" name="q15" required value="d">
+          <input type="radio" name="q15" value="d">
             <label for="d">9</label><br>
           <p id="f15"></p>
         </div>
@@ -251,7 +251,7 @@
       </li>
       <li>
         <div class="question" <p><input type="text" required name="q19ans"> is a comparison of two numbers by division;
-          also a fraction <input type="text" required name="q19ans"></p>
+          also a fraction.</p>
           <p id="f19"></p>
         </div>
       </li>
@@ -262,11 +262,11 @@
         </div>
       </li>
     </ol>
+	
+  <input type="submit">
+  <button onclick="resetQuiz()">Reset</button>
   </form>
   <p id="score"></p>
-
-  <button onclick="submitQuiz()">Submit</button>
-  <button onclick="resetQuiz()">Reset</button>
 
   <script>
     function submitQuiz() {
@@ -450,8 +450,8 @@
         f20.innerHTML = "Incorrect.";
         document.getElementById("f20").style.color = "red";
       }
-      score.innerHTML = "Score: " + score + "/20";
-      return;
+      document.getElementById("score").innerHTML = "Score: " + score + "/20";
+      return false;
     }
 
     function resetQuiz() {
