@@ -144,6 +144,9 @@
         <input type="radio" name="q15" value="d" required> 9 <br>
         <div class="feedback" id="q15Feedback"></div>
       </li>
+      </ol>
+      <h2>Fill in the Blanks</h2>
+      <ol>
       <div>
         <li for="q16">
           <p> Continue the sequence: 37, 78, 45, 70, 53, 62, 61, __, __ <input type="text" name="q16" required></p>
@@ -169,9 +172,6 @@
     </ol>
   </form>
   <p id="score"></p>
-
-  <h2>Fill in the Blanks</h2>
-  
 
   <button onclick="submitQuiz()">Submit</button>
   <button onclick="resetQuiz()">Reset</button>
@@ -228,7 +228,9 @@
       document.getElementById('score').textContent = `Score: ${score}`;
     }
 
-    function reset(){
+    function resetQuiz(){
+      document.getElementById('mcqForm').reset();
+      document.getElementById('score').innerHTML = '';
 
     }
   </script>
